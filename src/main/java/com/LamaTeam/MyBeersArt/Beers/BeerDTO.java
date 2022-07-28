@@ -6,12 +6,11 @@ import lombok.RequiredArgsConstructor;
 
 import java.util.UUID;
 
+@Data
 @AllArgsConstructor
 @RequiredArgsConstructor(staticName="of")
-@Data
-public class Beer {
+public class BeerDTO {
 
     private final UUID id;
     private String name;
-
 }

@@ -2,14 +2,17 @@ package com.LamaTeam.MyBeersArt.Beers;
 
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class BeerService {
 
-    public Beer getBeer (Beer oneBeer){
-        return Beer.of(12423); //TODO get beer from DB
+    public BeerDTO getBeer (Beer oneBeer){
+        //return new BeerDTO();
+        return BeerDTO.of(UUID.randomUUID()); //TODO get a beer from DB
     }
 
-    public String createNewBeer(){
-
+    public BeerDTO createNewBeer(String name){
+        return new BeerDTO(UUID.randomUUID(), name);
     }
 }

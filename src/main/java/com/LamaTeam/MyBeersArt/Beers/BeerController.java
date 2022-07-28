@@ -15,12 +15,12 @@ public class BeerController {
     }
 
     @GetMapping("/beer")
-    public Beer getBeer (@RequestParam(value = "name") Beer oneBeer){
+    public BeerDTO getBeer (@RequestParam(value = "name") Beer oneBeer){
         return beerService.getBeer(oneBeer);
     }
 
 
-    public Beer addNewBeer (@RequestParam(value = "name") String nameOfBeer){
+    public BeerDTO addNewBeer (@RequestParam(value = "name") String nameOfBeer){
         return beerService.createNewBeer(nameOfBeer);
     }
 }
